@@ -74,13 +74,13 @@ export default function App() {
   const handleChangeRadioL = (event) => {
     setValueRadioL(event.target.value);
   };
-  // 
+
+  // get the selected data distance or evaluate to fillter to get the result
   let dataFilters = data.filter(e => e.language.indexOf(valueRadioL) !== -1);
-  // console.log(dataFilters)
   if(isNullOrUndefined(valueRadioL)) {
     dataFilters = data
   }
-console.log(dataFilters)
+
   // render DataDocter
   const DataDocter = [];
   dataFilters.length > 0 &&
